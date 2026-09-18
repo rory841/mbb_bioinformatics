@@ -1,7 +1,9 @@
 
 from Bio import SeqIO
+from Bio.SeqUtils import gc_fraction
 
-fasta_filename = "sample.fasta"
+fasta_filename = "Mus_musculus.GRCm39.dna_sm.nonchromosomal.fasta"
+
 
 for record in SeqIO.parse(fasta_filename, "fasta"):
 
@@ -16,3 +18,4 @@ for record in SeqIO.parse(fasta_filename, "fasta"):
     print(f"Length:         {seq_len} bp") 
     print(f"GC Content:     {gc_percentage:.2f}%") 
     print(f"-" * 45) 
+
